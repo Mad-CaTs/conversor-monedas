@@ -7,12 +7,13 @@ import service.Conversor;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Menu {
-    public void mostrarMenu(String apiKey) {
+    public boolean mostrarMenu(String apiKey) {
         Scanner consola = new Scanner(System.in);
         boolean salir = false;
 
@@ -20,7 +21,6 @@ public class Menu {
             List<ApiOptions> opciones = cargarOpciones();
             mostrarOpciones(opciones);
 
-            while (!salir) {
                 System.out.print("Escriba una opción válida o CERO para salir: ");
                 int opcionElegida = consola.nextInt();
 
@@ -40,10 +40,13 @@ public class Menu {
                 } else {
                     System.out.println("Opción inválida, vuelve a digitar");
                 }
-            }
+            } catch (InputMismatchException e){
+            System.out.println("Opción inválida");
+
         } catch (Exception e) {
             System.out.println("Error al mostrar el menú: " + e.getMessage());
         }
+        return salir;
     }
 
     private List<ApiOptions> cargarOpciones() throws Exception {
