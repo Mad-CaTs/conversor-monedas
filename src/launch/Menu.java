@@ -49,6 +49,7 @@ public class Menu {
         return salir;
     }
 
+    //Cargar opciones
     private List<ApiOptions> cargarOpciones() throws Exception {
         InputStreamReader reader = new InputStreamReader(
                 Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("util/file.json"))
@@ -58,6 +59,7 @@ public class Menu {
         return gson.fromJson(reader, type);
     }
 
+    //Mostrar Opciones
     private void mostrarOpciones(List<ApiOptions> opciones) {
         System.out.println("********************************************************");
         System.out.println("**** Conversor de Monedas ****");
