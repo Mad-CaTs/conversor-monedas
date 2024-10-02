@@ -13,14 +13,14 @@
   },
   {
     "id": 3,
-    "descripcion": "Dólar estadounidense =>> Peso argentino",
+    "descripcion": "Dólar estadounidense =>> Peso Mexicano",
     "base": "USD",
-    "cambio": "ARS"
+    "cambio": "MXN"
   },
   {
     "id": 4,
-    "descripcion": "Peso argentino =>> Dólar estadounidense",
-    "base": "ARS",
+    "descripcion": "Peso Mexicano =>> Dólar estadounidense",
+    "base": "MXN",
     "cambio": "USD"
   },
   {
@@ -37,18 +37,18 @@
   },
   {
     "id": 7,
-    "descripcion": "Dólar estadounidense =>> Peso colombiano",
+    "descripcion": "Dólar estadounidense =>> Peso argentino",
     "base": "USD",
-    "cambio": "COP"
+    "cambio": "ARS"
   },
   {
     "id": 8,
-    "descripcion": "Peso colombiano =>> Dólar estadounidense",
-    "base": "COP",
+    "descripcion": "Peso argentino =>> Dólar estadounidense",
+    "base": "ARS",
     "cambio": "USD"
   },
   {
-    "id": 99,
+    "id": 0,
     "descripcion": "Salir",
     "base": "",
     "cambio": ""

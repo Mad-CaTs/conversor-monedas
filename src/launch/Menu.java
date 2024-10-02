@@ -21,7 +21,7 @@ public class Menu {
             mostrarOpciones(opciones);
 
             while (!salir) {
-                System.out.print("Escriba una opción válida o 99 para salir: ");
+                System.out.print("Escriba una opción válida o CERO para salir: ");
                 int opcionElegida = consola.nextInt();
 
                 ApiOptions opcionSeleccionada = opciones.stream()
@@ -30,15 +30,15 @@ public class Menu {
                         .orElse(null);
 
                 if (opcionSeleccionada != null) {
-                    if (opcionElegida == 99) {
-                        System.out.println("¡Hasta pronto!");
+                    if (opcionElegida == 0) {
+                        System.out.println("¡Nos vemos, adiós!");
                         salir = true;
                     } else {
                         Seleccion procesarSeleccion = new Seleccion();
                         procesarSeleccion.manejarSeleccion(opcionSeleccionada, apiKey);
                     }
                 } else {
-                    System.out.println("Opción inválida");
+                    System.out.println("Opción inválida, vuelve a digitar");
                 }
             }
         } catch (Exception e) {
