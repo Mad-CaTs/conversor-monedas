@@ -41,6 +41,7 @@ public class Menu {
                     System.out.println("Opción inválida, vuelve a digitar");
                 }
             } catch (InputMismatchException e){
+            consola.nextLine();
             System.out.println("Opción inválida");
 
         } catch (Exception e) {
