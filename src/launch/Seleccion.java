@@ -4,6 +4,7 @@ import service.Conversor;
 import sources.ApiOptions;
 import sources.Convert;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Seleccion {
@@ -31,8 +32,10 @@ public class Seleccion {
         }
     }
 
-    private void mostrarResultado(Convert resultado, double monto) {
+    private void mostrarResultado(Convert resultado, double monto) throws IOException {
         System.out.printf("Convertido: %.2f [%s] => %.2f [%s]%n",
                 monto, resultado.getMonedaBase(), resultado.getMonedaTotal(), resultado.getMonedaCambio());
+        System.out.println("Presiona Enter para continuar...");
+        System.in.read();
     }
 }
