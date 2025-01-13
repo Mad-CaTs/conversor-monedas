@@ -1,7 +1,7 @@
 <div align="center">
   <img src="/resources/Badge-Conversor.png" alt="Logo" height="200" width="200">
   <h2>
-    💸 Currency Exchange Aplication
+    💸 Currency Exchange Application
   </h2>
 </div>
 
@@ -32,7 +32,7 @@
           
 </div>
 
-# Console Aplication
+# Console Application
 
 Currency Exchange developed in Java. The system consumes the ExchangeRate-API to obtain currency conversion rates and uses an interactive menu generated from a JSON file to perform the conversions.
 
